@@ -25,7 +25,7 @@ export const SingleProduct = () => {
               {item.price}
               <span className="font-Dana text-xs mr-1 md:text-sm">تومان</span>
             </p>
-            <div className="flex items-center justify-between gap-4 w-full">
+            <div className="flex items-center justify-between gap-2 w-full xs:gap-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

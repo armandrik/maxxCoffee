@@ -3,7 +3,7 @@ import { Prize } from "./Prize";
 export const CoffeeClub = () => {
   return (
     <div dir="rtl" className="px-4 pt-8 bg-gray-100 dark:bg-[#27272A] md:py-20 lg:px-[100px] 2xl:px-[270px]">
-      <div className="w-full h-64 px-3 py-8 bg-gradient-to-l from-club-200 to-club-100 rounded-2xl md:flex md:items-center md:justify-around md:h-36">
+      <div className="w-full px-3 py-8 bg-gradient-to-l from-club-200 to-club-100 rounded-2xl md:flex md:items-center md:justify-around md:h-36 xs:h-64">
         <div className="flex items-center justify-start gap-3 mb-8 md:mb-0 md:justify-center">
           <img src="../images/Group 95.png" alt="diamond" />
           <div className="text-white">
@@ -13,7 +13,7 @@ export const CoffeeClub = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-between gap-3 md:w-1/2">
+        <div className="flex flex-col items-start justify-between gap-7 md:w-1/2 xs:flex-row">
           <div className="flex items-center justify-center gap-2">
             <Prize />
             <Prize />

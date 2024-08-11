@@ -82,9 +82,6 @@
     .sub-menu{
         @apply w-full flex flex-row-reverse items-center justify-end gap-[10px] p-2 text-zinc-700 text-sm rounded-md dark:text-white hover:cursor-pointer hover:text-orange-300 dark:hover:text-orange-300 transition-all
     }
-    .menu {
-        margin: 0;
-    }
 }
 
 /* HTML: <div class="loader"></div> */
