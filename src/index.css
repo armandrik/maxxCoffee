@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Dana";
+        /*400*/
+        src: local('Dana'), url('../fonts/Dana/woff2/DanaFaNum-Regular.woff2') format('woff2');
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "Dana Medium";
+        /*500*/
+        src: local('Dana'), url('../fonts/Dana/woff2/DanaFaNum-Medium.woff2') format('woff2');
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "Dana DemiBold";
+        /*600*/
+        src: local('Dana'), url('../fonts/Dana/woff2/DanaFaNum-DemiBold.woff2') format('woff2');
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "morabba light";
+        src: local('morabba'), url('../fonts/Morabba/woff2/Morabba-Light.woff2') format('woff2');
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "morabba medium";
+        src: local('morabba'), url('../fonts/Morabba/woff2/Morabba-Medium.woff2') format('woff2');
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "morabba bold";
+        src: local('morabba'), url('../fonts/Morabba/woff2/Morabba-Bold.woff2') format('woff2');
+        font-display: swap;
+    }
+    
+    body {
+        @apply font-Dana;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    :root {
+        --toastify-font-family: ;
+        --toastify-toast-background: #0aff68;
+        --toastify-toast-min-height: 32px;
+    }
+}
+
+@layer utilities {
+    
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+}
+
+@layer components {
+    .menu-item{
+        @apply text-base text-zinc-700 hover:text-orange-300 transition-all dark:text-white dark:hover:text-orange-300
+    }
+    .sub-menu{
+        @apply w-full flex flex-row-reverse items-center justify-end gap-[10px] p-2 text-zinc-700 text-sm rounded-md dark:text-white hover:cursor-pointer hover:text-orange-300 dark:hover:text-orange-300 transition-all
+    }
+    .menu {
+        margin: 0;
+    }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    color: #ffffff;
+    width: 4px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+    transform: translateX(-38px);
+    animation: l21 .5s infinite alternate linear;
+  }
+  
+  @keyframes l21 {
+    50%  {box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px}
+    100% {box-shadow: 19px 0 0 0  , 38px 0 0 3px, 57px 0 0 7px}
+  }
