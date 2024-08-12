@@ -32,7 +32,7 @@ export const Home = () => {
         </p>
       </div>
       <svg
-        className="opacity-0 absolute bottom-0 left-0 right-0 mx-auto text-gray-100 dark:text-zinc-800 lg:opacity-100"
+        className="opacity-0 invisible absolute bottom-0 left-0 right-0 mx-auto text-gray-100 dark:text-zinc-800 lg:visible lg:opacity-100"
         width="100"
         height="22"
         viewBox="0 0 100 22"

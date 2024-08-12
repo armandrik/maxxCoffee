@@ -69,7 +69,7 @@ export const RegisterWrapper = () => {
     <div
       ref={isMenuOpen}
       dir="rtl"
-      className="fixed left-0 top-[17%] md:top-[200px] inset-x-0 mx-auto z-50 flex flex-col items-center w-[380px] sm:w-[500px] p-4 border-t-[3px] border-orange-300 rounded-2xl shadow-menuShadow transition-all bg-white dark:bg-zinc-700"
+      className="fixed left-0 top-[17%] inset-x-0 mx-auto z-50 flex flex-col items-center w-[350px] sm:w-[500px] p-4 border-t-[3px] border-orange-300 rounded-2xl shadow-menuShadow transition-all bg-white dark:bg-zinc-700"
     >
       <h1 className="text-center text-xl md:text-2xl text-zinc-700 dark:text-white mb-5">
         {hasAccount ? "ورود به حساب" : "ایجاد حساب کاربری"}
