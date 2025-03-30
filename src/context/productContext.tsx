@@ -137,9 +137,28 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         const response = await fetch(
           "https://api.iransweb.com/products/coffee"
         );
-        const json = await response.json();
-        setProduct(json);
-        setLoading(false);
+        if(response.status === 200){
+          const json = await response.json();
+          setProduct(json);
+          setLoading(false);
+        }else if(response.status === 500){
+          setProduct([])
+          setLoading(true);
+          const toastMessage = () => {
+            toast.error("خطا در سرور", {
+              position: "top-right",
+              autoClose: 1000,
+              hideProgressBar: true,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              transition: Slide,
+            });
+          };
+          toastMessage()
+        }
       } catch (error) {
         console.error("Failed to fetch products:", error);
         setLoading(true);

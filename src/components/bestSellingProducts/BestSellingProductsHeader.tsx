@@ -1,3 +1,4 @@
+
 export const BestSellingProductsHeader = () => {
   const scrollLeft = () => {
     document.getElementById("scrollContainer")!.scrollLeft += 300;

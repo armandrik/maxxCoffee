@@ -20,17 +20,17 @@ export const ThemeProvider = ({ children }: ThemeProviderProp) => {
 
   const changeTheme = () => {
     const root = document.querySelector("#htmlroot")!;
-    let audio = new Audio('../audio/switchToLightSound.wav')
+    let audio = new Audio("../audio/switchToLightSound.wav");
     if (theme === "dark") {
       setTheme("light");
       saveToLocalStorage("light");
       root.classList.remove("dark");
-      audio.play()
+      audio.play();
     } else if (theme === "light") {
       setTheme("dark");
       saveToLocalStorage("dark");
       root.classList.add("dark");
-      audio.play()
+      audio.play();
     }
   };
 
